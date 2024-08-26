@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('task-form').addEventListener('submit', function(event) {
             event.preventDefault();
             createTask();
-            window.location.href = 'main.html'; // Redirige al panel principal después de crear una tarea
+            window.location.href = 'index.html'; // Redirige al panel principal después de crear una tarea
         });
     }
 
@@ -50,13 +50,13 @@ function isAuthenticated() {
 function authenticateUser() {
     // Aquí deberías añadir la lógica real para autenticar a los usuarios
     localStorage.setItem('authenticated', 'true');
-    window.location.href = 'main.html'; // Redirige al panel principal después de iniciar sesión
+    window.location.href = 'index.html'; // Redirige al panel principal después de iniciar sesión
 }
 
 // Función para autenticar como invitado
 function authenticateAsGuest() {
     localStorage.setItem('authenticated', 'true');
-    window.location.href = 'main.html'; // Redirige al panel principal como invitado
+    window.location.href = 'index.html'; // Redirige al panel principal como invitado
 }
 
 // Función para crear una nueva tarea y guardarla en localStorage

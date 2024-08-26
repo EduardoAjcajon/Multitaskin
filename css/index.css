@@ -153,3 +153,8 @@ footer img {
     vertical-align: middle;
     margin-right: 10px;
 }
+#create-task-button{
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 1rem;
+}

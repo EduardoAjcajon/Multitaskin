@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - Gestor de Tareas</title>
+    <title>Inicio de Sesión - Gestor de Tareas</title>
     <link rel="stylesheet" href="css/config.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div id="login-panel">
-        <h1>Bienvenido a Gestor de Tareas</h1>
+        <h1>Bienvenido</h1>
         <form id="login-form">
-            <input type="email" id="email" placeholder="Correo electrónico" required>
-            <input type="password" id="password" placeholder="Contraseña" required>
+            <input type="email" id="login-email" placeholder="Correo Electrónico" required>
+            <input type="password" id="login-password" placeholder="Contraseña" required>
             <button type="submit">Iniciar Sesión</button>
-            <button id="guest-access">Entrar sin Credenciales</button>
+            <button id="guest-access" type="button">Entrar como Invitado</button>
+            <a href="signup.html">Crear una Cuenta</a>
         </form>
-        <p>¿No tienes una cuenta? <a href="signup.html">Crear cuenta</a></p>
-        <button id="github-login">Iniciar con GitHub</button>
     </div>
     <script src="js/main.js"></script>
 </body>

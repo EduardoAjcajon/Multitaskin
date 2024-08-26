@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Redirigir a la página de inicio de sesión si no está autenticado
+    if (!isAuthenticated()) {
+        window.location.href = 'login.html';
+    }
+
     // Manejar el formulario de creación de tareas
     if (document.getElementById('task-form')) {
         document.getElementById('task-form').addEventListener('submit', function(event) {
@@ -19,7 +24,40 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'taskform.html'; // Redirige al formulario de nueva tarea
         });
     }
+
+    // Manejar el inicio de sesión
+    if (document.getElementById('login-form')) {
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            authenticateUser();
+        });
+    }
+
+    // Acceso sin credenciales
+    if (document.getElementById('guest-access')) {
+        document.getElementById('guest-access').addEventListener('click', function() {
+            authenticateAsGuest();
+        });
+    }
 });
+
+// Función para comprobar si el usuario está autenticado
+function isAuthenticated() {
+    return localStorage.getItem('authenticated') === 'true';
+}
+
+// Función para autenticar al usuario
+function authenticateUser() {
+    // Aquí deberías añadir la lógica real para autenticar a los usuarios
+    localStorage.setItem('authenticated', 'true');
+    window.location.href = 'main.html'; // Redirige al panel principal después de iniciar sesión
+}
+
+// Función para autenticar como invitado
+function authenticateAsGuest() {
+    localStorage.setItem('authenticated', 'true');
+    window.location.href = 'main.html'; // Redirige al panel principal como invitado
+}
 
 // Función para crear una nueva tarea y guardarla en localStorage
 function createTask() {

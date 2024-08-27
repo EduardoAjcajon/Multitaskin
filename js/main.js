@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Redirigir a la página de inicio de sesión si no está autenticado
     if (!isAuthenticated()) {
-        window.location.href = './login.html';
+        window.location.href = 'login.html';
     }
 
     // Manejar el formulario de creación de tareas
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('task-form').addEventListener('submit', function(event) {
             event.preventDefault();
             createTask();
-            window.location.href = './index.html'; // Redirige al panel principal después de crear una tarea
+            window.location.href = 'index.html'; // Redirige al panel principal después de crear una tarea
         });
     }
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Navegación al formulario de creación de tarea
     if (document.getElementById('create-task-button')) {
         document.getElementById('create-task-button').addEventListener('click', function() {
-            window.location.href = './taskform.html'; // Redirige al formulario de nueva tarea
+            window.location.href = 'taskform.html'; // Redirige al formulario de nueva tarea
         });
     }
 

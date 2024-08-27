@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <a href="https://github.com/EduardoAjcajon?tab=repositories" class="btnGit">
+        Github
+    </a>
+    
     <div id="login-panel">
         <h1>Bienvenido</h1>
         <form id="login-form">
             <input type="email" id="login-email" placeholder="Correo Electrónico" required>
             <input type="password" id="login-password" placeholder="Contraseña" required>
-            <button type="submit">Iniciar Sesión</button>
-            <button id="guest-access" type="button">Entrar como Invitado</button>
-            <a href="signup.html">Crear una Cuenta</a>
+            <div class="btnLogin">
+                <button id="loginBtn" type="submit">Iniciar Sesión</button>
+                <button id="guest-access" type="button">Entrar como Invitado</button>
+                <a href="signup.html" class="btn_crear_cuenta">Crear una Cuenta</a>
+            </div>
         </form>
     </div>
     <script src="js/main.js"></script>

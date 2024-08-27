@@ -90,10 +90,15 @@ function displayTasks() {
         const taskElement = document.createElement('div');
         taskElement.classList.add('task-item');
         taskElement.innerHTML = `
-            <h3>${task.name}</h3>
-            <p>Encargado: ${task.person}</p>
-            <p>Fecha de entrega: ${task.date}</p>
-            <p>Estado: ${task.status}</p>
+            <div class="contenedorTask">
+                <span class="material-symbols-outlined">check_circle</span>
+                <h3>${task.name}</h3>
+                <div class="cont2">
+                    <p>Encargado: ${task.person}</p>
+                    <p>Fecha de entrega: ${task.date}</p>
+                </div>
+                <p>Estado: ${task.status}</p>
+            </div>
             <button class="delete-task-button" data-index="${index}">Eliminar</button>
         `;
         taskView.appendChild(taskElement);
